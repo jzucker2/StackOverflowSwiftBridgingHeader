@@ -13,9 +13,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var client: PubNub?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        client = PubNub.clientWithConfiguration(PNConfiguration(publishKey: "SampleKey", subscribeKey: "SampleKey"))
         return true
     }
 

@@ -37,6 +37,7 @@
 		5151CFF41B694CCB005DC673 /* StackOverflowAnswerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackOverflowAnswerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5151CFF91B694CCB005DC673 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5151CFFA1B694CCB005DC673 /* StackOverflowAnswerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackOverflowAnswerTests.swift; sourceTree = "<group>"; };
+		5151D0041B694D26005DC673 /* StackOverflowAnswer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StackOverflowAnswer-Bridging-Header.h"; sourceTree = "<group>"; };
 		60409CC5D0BD60684628FAC5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2B5CCF2B68697F3E41D27FE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B6CA5513968A2F575ABECC3A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 				5151CFEB1B694CCB005DC673 /* Images.xcassets */,
 				5151CFED1B694CCB005DC673 /* LaunchScreen.xib */,
 				5151CFE21B694CCB005DC673 /* Supporting Files */,
+				5151D0041B694D26005DC673 /* StackOverflowAnswer-Bridging-Header.h */,
 			);
 			path = StackOverflowAnswer;
 			sourceTree = "<group>";
@@ -402,9 +404,12 @@
 			baseConfigurationReference = A2B5CCF2B68697F3E41D27FE /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = StackOverflowAnswer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StackOverflowAnswer/StackOverflowAnswer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -413,9 +418,11 @@
 			baseConfigurationReference = B6CA5513968A2F575ABECC3A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = StackOverflowAnswer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StackOverflowAnswer/StackOverflowAnswer-Bridging-Header.h";
 			};
 			name = Release;
 		};
